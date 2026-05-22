@@ -9,9 +9,7 @@ body {
   width: 100% !important;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(135deg, #0cf304 0%, #0b6d02 100%) no-repeat fixed;
-
-  /* Dark mode fix */
+  background: linear-gradient(135deg, #22c55e 0%, #14532d 100%) no-repeat fixed;
   color-scheme: light;
 }
 
@@ -25,7 +23,6 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-
   background: transparent;
   color: #111827;
 }
@@ -40,11 +37,9 @@ body {
   gap: 20px;
   padding: 20px;
   overflow: hidden;
-
   color: #111827;
 }
 
-/* Oszlopok fixálása */
 .side-panel {
   flex: 0 0 350px;
   height: 100%;
@@ -59,9 +54,64 @@ body {
 .panel-card {
   background: #ffffff;
   color: #111827;
-
   border-radius: 12px;
   padding: 1.2rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   height: 100%;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  #app,
+  .app-wrapper {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: auto;
+    overflow: visible;
+  }
+
+  .center-layout {
+    order: -1;
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+
+  .side-panel {
+    flex: 1 1 280px;
+    height: auto;
+  }
+
+  .content .table-card,
+  .content .form-box,
+  .side-panel .panel-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .side-panel {
+    flex: 1 1 auto;
+    width: 100%;
+  }
 }

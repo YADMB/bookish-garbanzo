@@ -121,3 +121,13 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 640px) {
+  .form-box {
+    padding: 1.25rem;
+    max-width: none;
+  }
+  .form-header {
+    margin-bottom: 1.25rem;
+  }
+}

@@ -5,7 +5,6 @@ import TeamTable from './components/TeamTable.jsx';
 import BookingForm from './components/BookingForm.jsx';
 import LineupPanel from './components/LineupPanel.jsx';
 
-// Külső adat és a javított CSS importálása
 import { teamsData } from './data/teams.js';
 import './assets/main.css';
 

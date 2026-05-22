@@ -9,7 +9,6 @@ function BookingForm({ selectedTeam }) {
     e.preventDefault();
     setIsLoading(true);
 
-    // Szimulált hálózati késleltetés (2 másodperc)
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     alert(`Sikeres foglalás!\nNév: ${formData.name}\nCsapat: ${selectedTeam}`);
